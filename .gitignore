@@ -1,2 +1,4 @@
 node_modules
 config.js
+es_lint
+prettier
