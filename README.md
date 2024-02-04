@@ -58,27 +58,17 @@
 
 ## Technologies Used
 
-<details>
-
-<Summary> 
-Click Here
- </Summary>
-
-<br>
-
-| _Technology_ |
-| ------------ |
-| MongoDB      |
-| Express      |
-| React        |
-| Node         |
-| GraphQL      |
-| Apollo       |
-| JWT          |
-| Semantic UI  |
-| Bcrypt       |
-
-</details>
+| _Technology_    | Purpose           |
+| --------------- | ----------------- |
+| **MongoDB**     | Database          |
+| **Express**     | BackEnd Framework |
+| **React**       | FrontEnd          |
+| **Node**        | JS Environment    |
+| **GraphQL**     | Query Language    |
+| **Apollo**      | GraphQL Server    |
+| **JWT**         | Authentication    |
+| **Semantic UI** | CSS Framework     |
+| **Bcrypt**      | Password Hashing  |
 
 </div>
 
@@ -90,15 +80,16 @@ Click Here
 
 ## Screenshots
 
+![screenshot](./readme-pics/socialEyes-WebFullWireframe-main.png)
+
 <details>
 
 <Summary>
-    Click Here
+    Click Here for More!
 </Summary>
 
 <br>
 
-![screenshot](./readme-pics/socialEyes-WebFullWireframe-main.png)
 ![screenshot](./readme-pics/socialEyes-MobileWireframe-main.png)
 ![screenshot](./readme-pics/socialEyes-WebFullWireframe-loginModal.png)
 
