@@ -2,7 +2,7 @@
 
 ![SocialEyesS](./readme-pics/tinyLogo%20-%20no%20back.png)
 
-# Social Eyes Social Media Website
+# Social Eyes antiSocial Media Website
 
 </div>
 
@@ -16,9 +16,9 @@
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **SocialEyes** is a _simple_ Social Media App designed to quickly post thoughts, ideas, or musings for others to view and engage with. The point is simple getting Eyes on your content. Other users can engage with your posts by liking them 👀 or starting a conversation via comment 💬 functionality.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **SocialEyes** is an _anti_ Social Media App designed to quickly post thoughts, ideas, or musings for others to view and engage with. The point is simple: getting Eyes on your content not You! Other users can engage with your posts by liking them 👀 or comment their thoughts on your post 💬.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All posts are public, but your name and info are not shown allowing a new layer of anonymity and judgement free sharing. Get some fresh eyes on your ideas, start a new conversation about a topic that interests you, or debate the finer points of things like pineapple 🍍 on a pizza🍕. The point is to get Eyes on your Post not You!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All posts are public, but your name and info are not shown allowing a new layer of anonymity and judgement free sharing allowing you to be as social as you want _or don't want_ to be. Get some fresh eyes on your ideas, start a new conversation about a topic that interests you, or debate the finer points of things like pineapple 🍍 on a pizza🍕 all anonymously!
 
 ---
 
@@ -66,14 +66,17 @@ Click Here
 
 <br>
 
-| Technology | Purpose        |
-| ---------- | -------------- |
-| MongoDB    | Database       |
-| Express    | Back End       |
-| React      | Front End      |
-| GraphQL    | Query Language |
-| Apollo     | Server         |
-| JWT        | Authentication |
+| _Technology_ |
+| ------------ |
+| MongoDB      |
+| Express      |
+| React        |
+| Node         |
+| GraphQL      |
+| Apollo       |
+| JWT          |
+| Semantic UI  |
+| Bcrypt       |
 
 </details>
 
@@ -95,7 +98,7 @@ Click Here
 
 <br>
 
-![screenshot](./readme-pics/socialEyes-WebFullWireframe-loginModal.png)
+![screenshot](./readme-pics/socialEyes-WebFullWireframe-main.png)
 ![screenshot](./readme-pics/socialEyes-MobileWireframe-main.png)
 ![screenshot](./readme-pics/socialEyes-WebFullWireframe-loginModal.png)
 
