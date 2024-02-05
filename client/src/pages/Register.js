@@ -2,7 +2,6 @@ import gql from 'graphql-tag';
 import React, { useState } from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import { useMutation } from '@apollo/client';
-import { graphQLErrors } from 'graphql';
 
 function Register() {
   const [errors, setErrors] = useState({});
@@ -18,12 +17,12 @@ function Register() {
   };
 
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
-    update(proxy, result) {
+    update(_, result) {
       console.log(result);
     },
     onError(err) {
-      console.log(err.graphQLErrors[0].extensions.exception.errors);
-      setErrors(err.graphQLErrors[0].extensions.exception.errors);
+      setErrors(err.graphQLErrors[0].extensions);
+      console.log(err.graphQLErrors[0].extensions);
     },
     variables: values,
   });
@@ -80,7 +79,7 @@ function Register() {
       {Object.keys(errors).length > 0 && (
         <div className="ui error message">
           <ul className="list">
-            {Object.values(errors).map((value) => (
+            {Object.values(errors.errors).map((value) => (
               <li key={value}>{value}</li>
             ))}
           </ul>
