@@ -31,9 +31,9 @@ function PostCard({
     <Card fluid>
       <CardContent>
         <Image
-          floated="right"
-          size="mini"
-          src="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
+          floated="left"
+          size="tiny"
+          src="https://img.freepik.com/premium-vector/man-silhouette-profile-male-avatar-anonymous-icon-censored-face_434359-85.jpg?w=996"
         />
         <CardHeader>{username}</CardHeader>
         <CardMeta as={Link} to={`/posts/${id}`}>
@@ -43,10 +43,10 @@ function PostCard({
       </CardContent>
       <CardContent extra>
         <Button as="div" labelPosition="right" onClick={likePost}>
-          <Button color="teal" basic>
+          <Button color="purple" basic>
             <Icon name="eye" />
           </Button>
-          <Label basic color="teal" pointing="left">
+          <Label basic color="purple" pointing="left">
             {likeCount}
           </Label>
         </Button>
@@ -55,7 +55,7 @@ function PostCard({
           <Button color="green" basic>
             <Icon name="comments" />
           </Button>
-          <Label basic color="green" pointing="left">
+          <Label basic inverted color="green" pointing="left">
             {commentCount}
           </Label>
         </Button>

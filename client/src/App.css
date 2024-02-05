@@ -1,11 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Lumanosimo&family=Rock+Salt&family=Rubik+Glitch+Pop&family=Ysabeau+Office:wght@500&display=swap');
+
+body {
+  font-family: 'Cabin', serif;
+}
+
 .page-title {
-  display: block !important;
+  display: flex !important;
   text-align: center;
-  font-size: 2rem;
-  margin-top: 10px;
+  justify-content: center !important;
+  align-items: center;
+  font-size: 50px;
+  margin: auto;
+  color: rgba(123, 0, 255, 0.893);
+  width: fit-content;
+}
+
+.page-picture {
+  display: flex !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin: 10px auto;
+  flex-direction: column !important;
+  max-height: 400px;
+}
+
+.page-title h1,
+.page-picture h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.page-picture h1 {
+  color: yellow;
+}
+
+.page-title h2 {
+  font-family: 'Ysabeau Office', sans-serif;
+  font-size: 20px;
+  color: white;
+  opacity: calc(1 - 0.3);
+  font-style: italic;
+  margin-top: 25px;
 }
 
 .form-container {
-  width: 400px;
+  max-width: 500px;
+
   margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.form h1 {
+  display: block !important;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 10px;
+  color: rgba(123, 0, 255, 0.893);
+  font-family: 'Rock Salt', cursive;
+}
+
+.field {
+  width: 90%;
+}
+
+.logo-image {
+  max-height: 100px;
+}
+
+.description {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: rgb(45, 165, 16) 1px dotted;
+  min-height: 100px;
+  color: white !important;
+}
+
+.profile-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.861) !important;
+}
+
+.extra {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.extra a {
+  color: white !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.banner {
+  margin: auto;
+  height: 200px;
+  width: 90%;
+  background: url('./components/banner-pic.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 35px;
+  opacity: calc(1 - 0.5);
+}
+
+.header {
+  /* font-family: 'Lumanosimo', serif !important; */
+  padding: 5px;
+  color: white !important;
+}
+
+.meta {
+  color: white !important;
+}
+
+.homeIcon {
+  font-size: 30px !important;
+  padding: 10px !important;
 }

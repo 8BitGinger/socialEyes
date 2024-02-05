@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Peralta&display=swap');
 
 body {
-  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+  background: linear-gradient(
+    360deg,
+    rgba(123, 0, 255, 0.857) 0%,
+    #3ad551 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   /* font-family: 'Peralta', serif; */
 }

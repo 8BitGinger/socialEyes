@@ -4,19 +4,21 @@ import { Link } from 'react-router-dom';
 
 function MenuBar() {
   const pathname = window.location.pathname;
-  const path = pathname === '/' ? 'home' : pathname.substr(1);
+  const path = pathname === '/' ? '' : pathname.substr(1);
   const [activeItem, setActiveItem] = useState(path);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
-    <Menu pointing secondary size="massive" color="teal">
+    <Menu pointing secondary size="massive" color="violet">
       <MenuItem
-        name="home"
-        active={activeItem === 'home'}
+        name=""
+        className="homeIcon"
+        active={activeItem === ''}
         onClick={handleItemClick}
         as={Link}
         to="/"
+        icon="home"
       />
       <MenuMenu position="right">
         <MenuItem
@@ -32,6 +34,13 @@ function MenuBar() {
           onClick={handleItemClick}
           as={Link}
           to="/register"
+        />
+        <MenuItem
+          name="profile"
+          active={activeItem === 'profile'}
+          onClick={handleItemClick}
+          as={Link}
+          to="/profile"
         />
       </MenuMenu>
     </Menu>

@@ -16,7 +16,7 @@
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **SocialEyes** is an _anti_ Social Media App designed to quickly post thoughts, ideas, or musings for others to view and engage with. The point is simple: getting Eyes on your content not You! Other users can engage with your posts by liking them 👀 or comment their thoughts on your post 💬.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **SocialEyes** is an _anti_ Social Media App designed to quickly post thoughts, ideas, or musings for others to view and engage with. The point is simple: getting Eyes on your content not You! Other users can engage with your posts by liking them 👀 or comment their thoughts and replies 💬.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All posts are public, but your name and info are not shown allowing a new layer of anonymity and judgement free sharing allowing you to be as social as you want _or don't want_ to be. Get some fresh eyes on your ideas, start a new conversation about a topic that interests you, or debate the finer points of things like pineapple 🍍 on a pizza🍕 all anonymously!
 
@@ -34,7 +34,7 @@
 
 1. [Screenshots](#pics)
 
-1. [Contributing](#contribute)
+1. [Credits](#credits)
 
 1. [Links](#links)
 
@@ -98,11 +98,11 @@
 
 ---
 
-<div id="contribute"></div>
+<div id="credits"></div>
 
 <div align="center">
 
-## Contributing
+## Credits
 
 </div>
 
