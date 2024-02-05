@@ -10,38 +10,43 @@ body {
   justify-content: center !important;
   align-items: center;
   font-size: 50px;
-  margin: auto;
+  margin: 20px auto;
   color: rgba(123, 0, 255, 0.893);
   width: fit-content;
+  height: 200px;
+  align-content: center;
 }
 
 .page-picture {
-  display: flex !important;
+  display: flex;
   text-align: center;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
-  margin: 10px auto;
-  flex-direction: column !important;
-  max-height: 400px;
 }
 
 .page-title h1,
 .page-picture h1 {
   font-family: 'Rock Salt', cursive;
   font-size: 40px;
-  margin-top: 20px;
 }
 
 .page-picture h1 {
-  color: yellow;
+  color: rgb(11, 253, 15);
+
+  text-align: left;
+
+  margin: 30px;
+  margin-left: 10px;
+  margin-top: 45px;
+  font-size: 30px;
 }
 
 .page-title h2 {
   font-family: 'Ysabeau Office', sans-serif;
   font-size: 20px;
-  color: white;
-  opacity: calc(1 - 0.3);
+  color: rgb(245, 241, 7);
+
   font-style: italic;
   margin-top: 25px;
 }
@@ -55,6 +60,14 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.anti {
+  display: flex;
+  align-items: center;
+  margin-top: -50px;
+  margin-left: 25px;
 }
 
 .form h1 {
@@ -71,7 +84,8 @@ body {
 }
 
 .logo-image {
-  max-height: 100px;
+  max-height: 200px;
+  margin-right: -25px;
 }
 
 .description {
@@ -84,6 +98,7 @@ body {
   border: rgb(45, 165, 16) 1px dotted;
   min-height: 100px;
   color: white !important;
+  background-color: rgba(57, 58, 57, 0.769);
 }
 
 .profile-container {
@@ -121,14 +136,47 @@ form {
 }
 
 .banner {
+  position: relative;
   margin: auto;
-  height: 200px;
-  width: 90%;
+  height: 120px;
+  width: 120px;
   background: url('./components/banner-pic.jpg');
   background-position: center;
   background-size: cover;
-  border-radius: 35px;
-  opacity: calc(1 - 0.5);
+  border-radius: 50%;
+  opacity: calc(1 - 0.3);
+  border: greenyellow 3px solid;
+}
+
+.divider {
+  background-color: rgb(25, 255, 12);
+  opacity: 0.4;
+}
+
+.post-banner {
+  position: relative;
+  margin: auto;
+  height: 120px;
+  width: 120px;
+  background: url('./components/post-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  opacity: calc(1 - 0.3);
+  border: greenyellow 3px solid;
+}
+
+.dev-banner {
+  position: relative;
+  margin: auto;
+  height: 120px;
+  width: 120px;
+  background: url('./components/dev-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  opacity: calc(1 - 0.1);
+  border: greenyellow 3px solid;
 }
 
 .header {
@@ -141,7 +189,59 @@ form {
   color: white !important;
 }
 
+.about {
+  background-color: rgb(53, 178, 31) !important;
+}
+
+.about a {
+  color: rgb(53, 178, 31) !important;
+  font-size: large;
+}
+
+.about a:hover {
+  color: rgb(168, 55, 255) !important;
+  font-size: larger;
+}
+
+.orange {
+  color: rgb(205, 144, 254) !important;
+  font-style: italic;
+  font-size: small !important;
+}
+
+.about img {
+  max-height: 150px;
+  max-width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .homeIcon {
   font-size: 30px !important;
   padding: 10px !important;
+}
+
+.contact-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 10px;
+  margin-left: -15px;
+}
+
+.contact-strip a {
+  font-size: 30px !important;
+  margin: 15px;
+}
+
+.dev {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: fit-content !important;
 }

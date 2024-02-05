@@ -1,11 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
-import { Grid, GridRow } from 'semantic-ui-react';
+import { Grid, GridRow, Segment } from 'semantic-ui-react';
 import PostCard from '../components/PostCard';
 import logo from '../components/tinyLogo - no back.png';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import DevCard from '../components/developer';
 
 function HomePage() {
   const { loading, data } = useQuery(FETCH_POSTS_QUERY);
@@ -32,15 +33,29 @@ function HomePage() {
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.7 }}
+            className="anti"
           >
             <h2>The anti-social media</h2>
           </motion.div>
         </GridRow>
+
         <GridRow className="page-picture">
-          <h1>The Feed</h1>
-          <div className="banner"></div>
+          <a href="#post">
+            <div className="post-banner"></div>
+          </a>
+          <h1>New Post</h1>
         </GridRow>
-        <GridRow>
+
+        <div class="ui divider"></div>
+
+        <GridRow className="page-picture">
+          <a href="#feed">
+            <div className="banner"></div>
+          </a>
+          <h1>The Feed</h1>
+        </GridRow>
+
+        <GridRow id="feed">
           {loading ? (
             <h1>loading The Feed...</h1>
           ) : (
@@ -51,6 +66,19 @@ function HomePage() {
               </Grid.Column>
             ))
           )}
+        </GridRow>
+
+        <div class="ui divider"></div>
+        <GridRow className="page-picture">
+          <a href="#dev">
+            <div className="dev-banner"></div>
+          </a>
+          <h1>The Developer</h1>
+        </GridRow>
+        <GridRow id="dev">
+          <Grid.Column className="dev">
+            <DevCard />
+          </Grid.Column>
         </GridRow>
       </Grid>
     </>

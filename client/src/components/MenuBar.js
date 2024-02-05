@@ -37,7 +37,7 @@ function MenuBar() {
         />
         <MenuItem
           name="profile"
-          active={activeItem === 'profile'}
+          active={activeItem == 'profile'}
           onClick={handleItemClick}
           as={Link}
           to="/profile"

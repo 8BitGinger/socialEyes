@@ -43,10 +43,10 @@ function PostCard({
       </CardContent>
       <CardContent extra>
         <Button as="div" labelPosition="right" onClick={likePost}>
-          <Button color="purple" basic>
+          <Button color="violet" basic>
             <Icon name="eye" />
           </Button>
-          <Label basic color="purple" pointing="left">
+          <Label basic color="violet" pointing="left">
             {likeCount}
           </Label>
         </Button>
