@@ -25,7 +25,7 @@ const typeDefs = gql`
   type User {
     id: ID!
     email: String!
-    token: String!
+    token: String
     username: String!
     createdAt: String!
   }
@@ -39,6 +39,7 @@ const typeDefs = gql`
     getPosts: [Posts]
     getPost(postsID: ID!): Posts
     getUsers: [User]
+    getUser(userID: ID!): User
   }
   type Mutation {
     register(registerInput: RegisterInput): User!

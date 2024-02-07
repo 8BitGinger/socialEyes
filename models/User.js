@@ -6,6 +6,11 @@ const userSchema = new Schema({
   password: String,
   email: String,
   createdAt: String,
+  token: String,
+  posts: {
+    type: Schema.Types.ObjectId,
+    ref: 'posts',
+  },
 });
 
 module.exports = model('User', userSchema);

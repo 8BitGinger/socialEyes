@@ -12,9 +12,35 @@ import {
 } from 'semantic-ui-react';
 import dayjs from 'dayjs';
 import { Link } from 'react-router-dom';
+import avatar from '../assets/coder.png';
 
 var relativeTime = require('dayjs/plugin/relativeTime');
 dayjs.extend(relativeTime);
+
+var options = [
+  'IncognitoUser',
+  'AnonymousUser',
+  'SecretUser',
+  'ShadowUser',
+  'HiddenUser',
+  'MysteryUser',
+  'UnknownUser',
+  'GhostUser',
+  'StealthUser',
+  'PhantomUser',
+  'SilentUser',
+  'InvisibleUser',
+  'ConcealedUser',
+  'CovertUser',
+  'UnseenUser',
+  'HiddenUser',
+  'VeiledUser',
+  'MaskedUser',
+  'CloakedUser',
+  'ObscuredUser',
+  'DisguisedUser',
+];
+var choice = options[Math.floor(Math.random() * options.length)];
 
 function likePost() {
   console.log('Like post');
@@ -25,17 +51,13 @@ function commentOnPost() {
 }
 
 function PostCard({
-  post: { body, createdAt, id, username, likeCount, commentCount, likes },
+  post: { body, createdAt, id, username, likeCount, commentCount },
 }) {
   return (
     <Card fluid>
       <CardContent>
-        <Image
-          floated="left"
-          size="tiny"
-          src="https://img.freepik.com/premium-vector/man-silhouette-profile-male-avatar-anonymous-icon-censored-face_434359-85.jpg?w=996"
-        />
-        <CardHeader>{username}</CardHeader>
+        <Image floated="left" size="tiny" src={avatar} />
+        <CardHeader>{choice}</CardHeader>
         <CardMeta as={Link} to={`/posts/${id}`}>
           {dayjs(createdAt).fromNow(true)}
         </CardMeta>
@@ -43,10 +65,10 @@ function PostCard({
       </CardContent>
       <CardContent extra>
         <Button as="div" labelPosition="right" onClick={likePost}>
-          <Button color="violet" basic>
+          <Button color="yellow" basic>
             <Icon name="eye" />
           </Button>
-          <Label basic color="violet" pointing="left">
+          <Label basic color="yellow" pointing="left">
             {likeCount}
           </Label>
         </Button>
@@ -55,7 +77,7 @@ function PostCard({
           <Button color="green" basic>
             <Icon name="comments" />
           </Button>
-          <Label basic inverted color="green" pointing="left">
+          <Label basic inverted="true" color="green" pointing="left">
             {commentCount}
           </Label>
         </Button>

@@ -69,6 +69,7 @@
 | **JWT**         | Authentication    |
 | **Semantic UI** | CSS Framework     |
 | **Bcrypt**      | Password Hashing  |
+| **Framer**      | Animation/Motion  |
 
 </div>
 

@@ -7,23 +7,24 @@ import {
   Icon,
   Image,
 } from 'semantic-ui-react';
-import headshot from './about.png';
+import headshot from '../assets/about.png';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 
 const DevCard = () => (
   <motion.div
-    variants={fadeIn('right', 0.3)}
+    variants={fadeIn('down', 0.3)}
     initial="hidden"
     whileInView={'show'}
     viewport={{ once: false, amount: 0.4 }}
     id="about"
   >
     <Card className="about">
+      <h2 className="orange">8BitGinger</h2>
       <Image src={headshot} wrapped ui={false} />
       <CardContent>
         <CardHeader>Ryan Fann</CardHeader>
-        <CardHeader className="orange">Full Stack Web Dev</CardHeader>
+        <CardHeader className="dev-title">Full Stack Web Developer</CardHeader>
         <div className="contact-strip">
           <CardMeta>
             <a target="blank" href="https://ryanfann.netlify.app/">

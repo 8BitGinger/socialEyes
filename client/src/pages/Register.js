@@ -1,26 +1,33 @@
 import gql from 'graphql-tag';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import { useMutation } from '@apollo/client';
-import logo from '../components/tinyLogo - no back.png';
+import logo from '../assets/tinyLogo - no back.png';
+import { AuthContext } from '../context/auth';
+import { useForm } from '../utils/hooks';
 
-function Register() {
+function Register(props) {
+  const context = useContext(AuthContext);
   const [errors, setErrors] = useState({});
-  const [values, setValues] = useState({
+
+  // const initialState = {
+  //   username: '',
+  //   email: '',
+  //   password: '',
+  //   confirmPassword: '',
+  // };
+  const { onChange, onSubmit, values } = useForm(registerUser, {
     username: '',
     email: '',
     password: '',
     confirmPassword: '',
   });
 
-  const onChange = (event) => {
-    setValues({ ...values, [event.target.name]: event.target.value });
-  };
-
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
-    update(_, result) {
-      console.log(result);
+    update(_, { data: { register: userData } }) {
+      context.login(userData);
       window.location = '/';
+      console.log(userData);
     },
     onError(err) {
       setErrors(err.graphQLErrors[0].extensions.errors);
@@ -29,15 +36,14 @@ function Register() {
     variables: values,
   });
 
-  const onSubmit = (event) => {
-    event.preventDefault();
+  function registerUser() {
     addUser();
-  };
+  }
 
   return (
     <div className="form-container">
       <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
-        <div className="row">
+        <div className="row social">
           <img src={logo} alt="news" className="logo-image" />
 
           <h1>ign Up!</h1>
@@ -78,8 +84,8 @@ function Register() {
           name="confirmPassword"
           type="password"
           autoComplete="current-password"
-          error={errors.comfirmPassword ? true : false}
           value={values.confirmPassword}
+          error={errors.comfirmPassword ? true : false}
           onChange={onChange}
         />
         <Button type="submit" inverted color="green" className="colorButton">
