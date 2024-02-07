@@ -18,6 +18,7 @@ function MenuBar() {
         name={user.username}
         onClick={handleItemClick}
         active
+        className="usernameIcon"
         as={Link}
         to="/"
       />

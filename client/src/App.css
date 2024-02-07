@@ -308,6 +308,12 @@ form {
   padding: 10px !important;
 }
 
+.usernameIcon {
+  font-size: 25px !important;
+  padding: 10px !important;
+  font-family: 'Rock Salt', cursive !important;
+}
+
 .contact-strip {
   display: flex;
   justify-content: center;
