@@ -7,9 +7,7 @@
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "cd server && npm i && cd ../client && npm i",
-    "develop": "concurrently \"cd server && npm run server\" \"cd client && npm run start\"",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run start\""
   },
   "author": "",
   "license": "ISC",
