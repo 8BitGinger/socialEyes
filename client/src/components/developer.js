@@ -20,9 +20,8 @@ const DevCard = () => (
     id="about"
   >
     <Card className="about">
-      <h2 className="orange">8BitGinger</h2>
       <Image src={headshot} wrapped ui={false} />
-      <CardContent>
+      <CardContent className="low-card">
         <CardHeader>Ryan Fann</CardHeader>
         <CardHeader className="dev-title">Full Stack Web Developer</CardHeader>
         <div className="contact-strip">

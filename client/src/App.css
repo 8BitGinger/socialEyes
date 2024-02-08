@@ -23,6 +23,7 @@ body {
 
   align-items: center;
   margin: 20px 10px;
+  margin-bottom: 0;
   align-content: center;
 }
 
@@ -154,12 +155,23 @@ body {
   justify-content: center;
 }
 
-.content {
+.profile-pic {
+  max-width: 200px;
+  text-align: center;
+  align-self: center;
+}
+
+/* .content {
   background: linear-gradient(
     90deg,
     rgb(51, 51, 51) 20%,
     rgb(19, 19, 19) 100%
   ) !important;
+} */
+
+.card {
+  background: rgba(0, 0, 0, 0.452) !important;
+  border-radius: 25px !important;
 }
 
 .yellow {
@@ -274,8 +286,13 @@ form {
   color: white !important;
 }
 
+.low-card {
+  background-color: rgba(40, 40, 40, 0.587) !important;
+}
+
 .about {
-  background-color: rgb(42, 225, 94) !important;
+  background-color: rgb(16, 177, 16) !important;
+  overflow: hidden;
 }
 
 .about a {
@@ -284,7 +301,7 @@ form {
 }
 
 .about a:hover {
-  color: yellow !important;
+  color: rgb(16, 177, 16) !important;
   font-size: larger;
 }
 
@@ -364,6 +381,7 @@ form {
   width: 350px !important;
   height: 150px;
   margin-left: -20px !important;
+  margin-top: 0;
   border: 2px solid rgb(193, 232, 22) !important;
   border-radius: 25px !important;
   background: linear-gradient(
@@ -379,7 +397,7 @@ form {
 }
 
 .comments {
-  width: 100%;
+  width: 95%;
 }
 
 .social {
@@ -453,8 +471,31 @@ form {
     margin-left: -10px;
   }
 
+  .scoot-left {
+    scale: 0.9;
+  }
+
+  .profile-container {
+    width: 100vw !important;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .social {
+    margin-left: -30px;
+  }
+
+  .social h1 {
+    margin-left: -5px;
+  }
+
+  .card {
+    justify-self: center;
+  }
+
   .logo-image {
-    margin-left: 20px;
+    margin-left: -30px;
   }
 
   .column {
@@ -499,5 +540,23 @@ form {
 
   .form textarea {
     width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scoot-left h1 {
+    margin-left: -50px;
+  }
+
+  .logo-image {
+    margin-left: 40px;
+  }
+
+  .scoot-left {
+    scale: 0.9;
+  }
+
+  .social h1 {
+    margin-left: -40px;
   }
 }

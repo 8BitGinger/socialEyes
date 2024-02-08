@@ -32,6 +32,7 @@ function Profile() {
             src="https://img.freepik.com/premium-vector/man-silhouette-profile-male-avatar-anonymous-icon-censored-face_434359-85.jpg?w=996"
             wrapped
             ui={false}
+            className="profile-pic"
           />
           <CardContent>
             <CardHeader>{context.user.username}</CardHeader>

@@ -41,10 +41,10 @@ function Login(props) {
   return (
     <div className="form-container">
       <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
-        <div className="column social">
+        <div className="row social">
           <img src={logo} alt="news" className="logo-image" />
 
-          <h1>Log In!</h1>
+          <h1>ign in!</h1>
         </div>
         <Form.Input
           label="Username"
