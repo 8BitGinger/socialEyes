@@ -12,7 +12,7 @@ import logo from '../assets/tinyLogo - no back.png';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import { AuthContext } from '../context/auth';
-import { Link } from 'react-router-dom';
+import { Link, UNSAFE_useRouteId } from 'react-router-dom';
 
 function Profile() {
   // const { data, loading } = useQuery(FETCH_USER_QUERY);
@@ -71,10 +71,12 @@ function Profile() {
 }
 
 // const FETCH_USER_QUERY = gql`
-//   {
-//     getUser(userID: $userId) {
+//   query($userID: ID!){
+//     getUser(userID: {${userID}}) {
 //       username
 //       createdAt
+//       id
+//       commentCount
 //     }
 //   }
 // `;

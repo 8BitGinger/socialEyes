@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
-import { Grid, GridRow, Button } from 'semantic-ui-react';
+import { Grid, Transition, GridRow, Button } from 'semantic-ui-react';
 import PostCard from '../components/PostCard';
 import logo from '../assets/tinyLogo - no back.png';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import DevCard from '../components/developer';
 import NewPost from '../components/NewPost';
+import { AuthContext } from '../context/auth';
+import { FETCH_POSTS_QUERY } from '../utils/graphql';
 
 function HomePage() {
+  const { user } = useContext(AuthContext);
   const { loading, data } = useQuery(FETCH_POSTS_QUERY);
 
   const posts = data?.getPosts;
@@ -40,18 +43,20 @@ function HomePage() {
           </motion.div>
         </GridRow>
 
-        <GridRow className="page-picture">
-          <a href="#post">
-            <div className="post-banner"></div>
-          </a>
-          <h1>New Post</h1>
-        </GridRow>
+        {user && (
+          <>
+            <GridRow className="page-picture">
+              <a href="#post">
+                <div className="post-banner"></div>
+              </a>
+              <h1>New Post</h1>
+            </GridRow>
 
-        <GridRow id="post" className="contain-post">
-          <NewPost />
-        </GridRow>
-
-        <div className="ui divider"></div>
+            <GridRow id="post" className="contain-post">
+              <NewPost />
+            </GridRow>
+          </>
+        )}
 
         <GridRow className="page-picture">
           <a href="#feed">
@@ -64,15 +69,16 @@ function HomePage() {
           {loading ? (
             <h1>loading The Feed...</h1>
           ) : (
-            posts &&
-            posts.map((post) => (
-              <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-                <PostCard post={post} />
-              </Grid.Column>
-            ))
+            <Transition.Group>
+              {posts &&
+                posts.map((post) => (
+                  <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
+                    <PostCard post={post} />
+                  </Grid.Column>
+                ))}
+            </Transition.Group>
           )}
         </GridRow>
-
         <div className="ui divider"></div>
         <GridRow className="page-picture">
           <a href="#dev">
@@ -90,7 +96,7 @@ function HomePage() {
           <div className="foot">
             <a href="/">
               <Button className="ui button" inverted color="green">
-                Back to Top
+                Reload Feed
               </Button>
             </a>
           </div>
@@ -99,27 +105,5 @@ function HomePage() {
     </>
   );
 }
-
-const FETCH_POSTS_QUERY = gql`
-  {
-    getPosts {
-      id
-      body
-      createdAt
-      username
-      likeCount
-      likes {
-        username
-      }
-      commentCount
-      comments {
-        id
-        username
-        createdAt
-        body
-      }
-    }
-  }
-`;
 
 export default HomePage;

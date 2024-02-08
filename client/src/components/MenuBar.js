@@ -20,6 +20,7 @@ function MenuBar() {
         active
         className="usernameIcon"
         as={Link}
+        icon="home"
         to="/"
       />
       <MenuMenu position="right">

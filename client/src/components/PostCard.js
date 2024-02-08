@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Card,
   CardContent,
@@ -13,6 +13,9 @@ import {
 import dayjs from 'dayjs';
 import { Link } from 'react-router-dom';
 import avatar from '../assets/coder.png';
+import { AuthContext } from '../context/auth';
+import LikeButton from './LikeButton';
+import DeleteButton from './DeleteButton';
 
 var relativeTime = require('dayjs/plugin/relativeTime');
 dayjs.extend(relativeTime);
@@ -42,38 +45,42 @@ var options = [
 ];
 var choice = options[Math.floor(Math.random() * options.length)];
 
-function likePost() {
-  console.log('Like post');
-}
-
-function commentOnPost() {
-  console.log('Comment on post');
-}
-
 function PostCard({
-  post: { body, createdAt, id, username, likeCount, commentCount },
+  post: {
+    body,
+    createdAt,
+    id,
+    username,
+    likes,
+    comments,
+    likeCount,
+    commentCount,
+  },
 }) {
+  function likePost() {
+    console.log('Like post');
+  }
+
+  function deletePost() {
+    console.log('Delete post');
+  }
+
+  const { user } = useContext(AuthContext);
+
   return (
     <Card fluid>
       <CardContent>
         <Image floated="left" size="tiny" src={avatar} />
         <CardHeader>{choice}</CardHeader>
         <CardMeta as={Link} to={`/posts/${id}`}>
-          {dayjs(createdAt).fromNow(true)}
+          {dayjs(createdAt).fromNow(false)}
         </CardMeta>
         <CardDescription>{body}</CardDescription>
       </CardContent>
       <CardContent extra>
-        <Button as="div" labelPosition="right" onClick={likePost}>
-          <Button color="yellow" basic>
-            <Icon name="eye" />
-          </Button>
-          <Label basic color="yellow" pointing="left">
-            {likeCount}
-          </Label>
-        </Button>
+        <LikeButton user={user} post={{ id, likes, likeCount }} />
 
-        <Button as="div" labelPosition="right" onClick={commentOnPost}>
+        <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
           <Button color="green" basic>
             <Icon name="comments" />
           </Button>
@@ -81,6 +88,9 @@ function PostCard({
             {commentCount}
           </Label>
         </Button>
+        {user && user.username === username && (
+          <DeleteButton postsID={id} callback={deletePost} />
+        )}
       </CardContent>
     </Card>
   );

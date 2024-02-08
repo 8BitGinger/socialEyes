@@ -28,6 +28,7 @@ const typeDefs = gql`
     token: String
     username: String!
     createdAt: String!
+    posts: [Posts]!
   }
   input RegisterInput {
     username: String!

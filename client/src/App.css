@@ -174,10 +174,6 @@ body {
   border-radius: 25px !important;
 }
 
-.yellow {
-  color: yellow;
-}
-
 .extra {
   display: flex;
   margin: auto;
@@ -359,7 +355,7 @@ form {
   justify-content: center !important;
   text-align: center;
   margin: auto;
-  height: 300px;
+  height: fit-content;
   width: 100%;
 }
 
@@ -398,6 +394,10 @@ form {
 
 .comments {
   width: 95%;
+}
+
+.yellow {
+  color: yellow !important;
 }
 
 .social {
