@@ -85,7 +85,7 @@ function SinglePost(props) {
   return postMarkup;
 }
 
-const FETCH_POST_QUERY = gql`
+export const FETCH_POST_QUERY = gql`
   query ($postsID: ID!) {
     getPost(postsID: $postsID) {
       body
