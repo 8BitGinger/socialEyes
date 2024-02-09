@@ -73,7 +73,7 @@ function PostCard({
         <Image floated="left" size="tiny" src={avatar} />
         <CardHeader>{choice}</CardHeader>
         <CardMeta as={Link} to={`/posts/${id}`}>
-          {dayjs(createdAt).fromNow(false)}
+          {createdAt}
         </CardMeta>
         <CardDescription>{body}</CardDescription>
       </CardContent>

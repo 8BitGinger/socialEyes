@@ -1,6 +1,6 @@
 import { valueToObjectRepresentation } from '@apollo/client/utilities';
 import React from 'react';
-import { CommentGroup, Form, FormTextArea, Button } from 'semantic-ui-react';
+import { Form, Button } from 'semantic-ui-react';
 import { useForm } from '../utils/hooks';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
