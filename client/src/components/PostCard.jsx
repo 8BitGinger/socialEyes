@@ -17,8 +17,8 @@ import { AuthContext } from '../context/auth';
 import LikeButton from './LikeButton';
 import DeleteButton from './DeleteButton';
 
-var relativeTime = require('dayjs/plugin/relativeTime');
-dayjs.extend(relativeTime);
+// var relativeTime = require('dayjs/plugin/relativeTime');
+// dayjs.extend(relativeTime);
 
 var options = [
   'IncognitoUser',

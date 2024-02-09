@@ -28,8 +28,8 @@ function Login(props) {
       window.location = '/profile';
     },
     onError(err) {
-      setErrors(err.graphQLErrors[0].extensions.errors);
-      console.log(err.graphQLErrors[0].extensions.errors);
+      setErrors(err.graphQLErrors[0]);
+      console.log(err.graphQLErrors[0]);
     },
     variables: values,
   });

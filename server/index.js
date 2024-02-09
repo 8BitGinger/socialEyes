@@ -1,23 +1,44 @@
-const { ApolloServer } = require('apollo-server');
-const mongoose = require('mongoose');
-require('dotenv').config();
-// const User = require('./models/User');
-const Posts = require('./models/Posts');
+const express = require('express');
+const { ApolloServer } = require('@apollo/server');
+const { expressMiddleware } = require('@apollo/server/express4');
+const path = require('path');
+
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
 
+const db = require('./config/connection');
+const { configDotenv } = require('dotenv');
+
+const PORT = process.env.PORT || 5000;
+const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: ({ req }) => ({ req }),
 });
 
-mongoose
-  .connect(process.env.MONGODB, { useNewUrlParser: true })
-  .then(() => {
-    console.log('MongoDB Connected');
-    return server.listen(process.env.PORT || 5000);
-  })
-  .then((res) => {
-    console.log(`Server running at ${res.url}`);
+const startApolloServer = async () => {
+  await server.start();
+
+  app.use(express.urlencoded({ extended: false }));
+  app.use(express.json());
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/dist')));
+
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    });
+  }
+
+  app.use('/graphql', expressMiddleware(server));
+
+  db.once('open', () => {
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+    });
   });
+};
+
+startApolloServer();
