@@ -1,12 +1,12 @@
 <div align="center">
 
-![SocialEyesS](./readme-pics/tinyLogo%20-%20no%20back.png)
+![SocialEyesS](./readme-pics/tinyLogo.png)
 
 # Social Eyes antiSocial Media Website
 
 </div>
 
-### &nbsp;&nbsp;&nbsp;&nbsp; _Get some Eyes on your next thought, idea, or musing with SocialEyes!_
+### &nbsp;&nbsp;&nbsp;&nbsp; _SocialEyes...Social Media without being Social!_
 
 ---
 
@@ -16,15 +16,17 @@
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **SocialEyes** is an _anti_ Social Media App designed to quickly post thoughts, ideas, or musings for others to view and engage with. The point is simple: getting Eyes on your content not You! Other users can engage with your posts by liking them 👀 or comment their thoughts and replies 💬.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **SocialEyes** is an _anti_ Social Media App designed to quickly post thoughts, ideas, or musings for others to view, but not engage with. The point is simple: getting Eyes or Likes on your thoughts not you. Other users can see your posts and save them to their own profile if they like them.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All posts are public, but your name and info are not shown allowing a new layer of anonymity and judgement free sharing allowing you to be as social as you want _or don't want_ to be. Get some fresh eyes on your ideas, start a new conversation about a topic that interests you, or debate the finer points of things like pineapple 🍍 on a pizza🍕 all anonymously!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All posts are public, but your name and info are not shown allowing a new layer of anonymity and judgement free sharing allowing you to share without reservation. Post away if you have something to share to the masses or just scroll through the feed looking for inspiration, a laugh, or just to kill the time!
+**Lurk in peace.** Explore a diverse feed of anonymous posts at your own pace. No pressure to comment, like, or follow
+just pure observation!
 
 ---
 
 <div align="center">
 
-## Table of Contents
+## Table of Content
 
 </div>
 
@@ -70,6 +72,7 @@
 | **Semantic UI** | CSS Framework     |
 | **Bcrypt**      | Password Hashing  |
 | **Framer**      | Animation/Motion  |
+| **Render**      | Deployment        |
 
 </div>
 
@@ -105,6 +108,8 @@
 
 ## Credits
 
+Credits Here
+
 </div>
 
 ---
@@ -115,9 +120,9 @@
 
 ## Links
 
-### [Deployed Site]()
+### [Deployed Site](https://antisocialeyes.onrender.com/)
 
-### [Repo]()
+### [Repo](https://github.com/8BitGinger/antiSocialMedia)
 
 </div>
 
@@ -135,6 +140,6 @@
 
 ### GitHub:
 
-[8BitGinger]()
+[8BitGinger](https://github.com/8BitGinger)
 
 </div>
